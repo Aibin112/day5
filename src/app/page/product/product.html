@@ -1,0 +1,13 @@
+
+
+<div class="container">
+  <div class="row">
+    @for (item of data; track item.id) {
+  <div class="col-sm">
+     <app-card [productData]="item"></app-card>
+     
+</div>
+    }
+
+
+

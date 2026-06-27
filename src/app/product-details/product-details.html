@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+     <img [src]="singleProduct.image" class="img-fluid" alt="Product">
+    </div>
+    <div class="col">
+    <h2>{{ singleProduct.title }}</h2>
+
+    <p>{{ singleProduct.description }}</p>
+
+    <h4>Price: ₹{{ singleProduct.price }}</h4>
+
+    <p>Category: {{ singleProduct.category }}</p>
+
+    <p>Rating: {{ singleProduct.rating.rate }} ⭐</p>
+
+    <p>Reviews: {{ singleProduct.rating.count }}</p>
+
+    <button class="btn btn-primary">Buy Now</button>
+</div>
+    
+  </div>
+</div>
