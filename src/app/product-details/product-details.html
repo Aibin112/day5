@@ -4,17 +4,15 @@
      <img [src]="singleProduct.image" class="img-fluid" alt="Product">
     </div>
     <div class="col">
-    <h2>{{ singleProduct.title }}</h2>
+    <h2>{{ singleProduct.name }}</h2>
 
-    <p>{{ singleProduct.description }}</p>
+    <p><strong>Cuisine:</strong> {{ singleProduct.cuisine }}</p>
 
-    <h4>Price: ₹{{ singleProduct.price }}</h4>
+<p><strong>Difficulty:</strong> {{ singleProduct.difficulty }}</p>
 
-    <p>Category: {{ singleProduct.category }}</p>
+<p><strong>Prep Time:</strong> {{ singleProduct.prepTimeMinutes }} mins</p>
 
-    <p>Rating: {{ singleProduct.rating.rate }} ⭐</p>
-
-    <p>Reviews: {{ singleProduct.rating.count }}</p>
+<p><strong>Cook Time:</strong> {{ singleProduct.cookTimeMinutes }} mins</p>
 
     <button class="btn btn-primary">Buy Now</button>
 </div>

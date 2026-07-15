@@ -15,8 +15,13 @@ export class ProductDetails {
 
 ngOnInit() {
   this.id = this.ar.snapshot.params['id'];
-  this.api.getProductdetails(this.id).subscribe((res:any) => {
-    this.singleProduct = res;
+
+  this.api.getProductdetails(this.id).subscribe((res: any) => {
+    this.singleProduct = {
+      ...res,
+      price: (res.id * 37) % 500 + 99
+    };
+
     this.cdr.detectChanges();
   });
 }

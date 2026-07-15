@@ -9,9 +9,10 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getAllProducts() {
-    return this.http.get('https://fakestoreapi.com/products');
-  }
-  getProductdetails(id: number) {
-    return this.http.get(`https://fakestoreapi.com/products/${id}`);
-  }
+  return this.http.get('https://dummyjson.com/recipes');
+}
+
+getProductdetails(id: number) {
+  return this.http.get(`https://dummyjson.com/recipes/${id}`);
+}
 }

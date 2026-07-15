@@ -52,10 +52,14 @@ export class Product {
 data: any = [];
 constructor(private apiservice: ApiService,private cdr: ChangeDetectorRef) {} 
 
-ngOnInit(){
- this.apiservice.getAllProducts().subscribe((res:any)=>{
-  this.data = res
-  this.cdr.detectChanges();
- })
+ngOnInit() {
+  this.apiservice.getAllProducts().subscribe((res:any) => {
+    this.data = res.recipes.map((item:any) => ({
+      ...item,
+      price: (item.id * 37) % 400 + 100
+    }));
+
+    this.cdr.detectChanges();
+  });
 }
 }
